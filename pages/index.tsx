@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldCheck, Droplets, FlaskConical } from "lucide-react";
+import { ShieldCheck, Droplets, FlaskConical, AlertTriangle, Target, CheckCircle } from "lucide-react";
 
 export default function Landing() {
   return (
@@ -13,6 +13,9 @@ export default function Landing() {
           name="description"
           content="India's first at-home AI-powered hair diagnostic kit with dermatologist review."
         />
+        <meta property="og:title" content="Early HairDx – Personalized Hair Diagnosis" />
+        <meta property="og:description" content="India's first at-home AI-powered hair diagnostic kit with dermatologist review. No more trial-and-error." />
+        <meta property="og:type" content="website" />
       </Head>
       <main className="min-h-screen bg-white flex flex-col">
         {/* Hero */}
@@ -28,7 +31,8 @@ export default function Landing() {
           <div className="mt-8 flex justify-center gap-4">
             <Link
               href="/sales"
-              className="px-6 py-3 rounded-full bg-lime-600 text-white font-bold shadow hover:scale-105 transition"
+              className="px-6 py-3 rounded-full text-white font-bold shadow hover:scale-105 transition"
+              style={{ background: 'linear-gradient(135deg, #9cd312 0%, #d2f47e 100%)' }}
             >
               Discover HairDx
             </Link>
@@ -74,6 +78,45 @@ export default function Landing() {
                 Trial-and-error wastes ₹2000+/mo
               </p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Problem-Solution Visual */}
+        <section className="px-6 py-20 bg-slate-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-semibold text-slate-900 text-center mb-12">
+              From Problem to Solution
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 items-center">
+              {/* Problem */}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-center p-6 bg-red-50 border border-red-200 rounded-2xl"
+              >
+                <AlertTriangle className="mx-auto h-12 w-12 text-red-500 mb-4" />
+                <h3 className="font-semibold text-slate-900 mb-2">The Problem</h3>
+                <p className="text-sm text-slate-600">
+                  Hair loss, dandruff, and scalp issues plague millions with no clear diagnosis
+                </p>
+              </motion.div>
+
+              {/* Arrow */}
+              <div className="flex justify-center">
+                <Target className="h-8 w-8 text-lime-600" />
+              </div>
+
+              {/* Solution */}
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-center p-6 bg-lime-50 border border-lime-200 rounded-2xl"
+              >
+                <CheckCircle className="mx-auto h-12 w-12 text-lime-600 mb-4" />
+                <h3 className="font-semibold text-slate-900 mb-2">Our Solution</h3>
+                <p className="text-sm text-slate-600">
+                  AI-powered analysis + expert dermatologists = personalized treatment plans
+                </p>
+              </motion.div>
+            </div>
           </div>
         </section>
 
