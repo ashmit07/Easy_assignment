@@ -28,7 +28,7 @@ export default function Landing() {
           <div className="mt-8 flex justify-center gap-4">
             <Link
               href="/sales"
-              className="px-6 py-3 rounded-full bg-lime-600 text-white font-medium shadow hover:scale-105 transition"
+              className="px-6 py-3 rounded-full bg-lime-600 text-white font-bold shadow hover:scale-105 transition"
             >
               Discover HairDx
             </Link>
@@ -79,7 +79,7 @@ export default function Landing() {
 
         {/* CTA footer */}
         <footer className="mt-auto px-6 py-8 text-center text-sm text-slate-500 border-t">
-          © 2025 Early HairDx · Made for APM Assignment
+          © 2025 Early HairDx | Made for APM Assignment
         </footer>
       </main>
     </>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Sparkles, ChevronRight, Check } from "lucide-react";
+import { Sparkles, ChevronRight, Check, UserCheck, Brain, FlaskConical } from "lucide-react";
 
 const colors = {
   accent: "#9cd312",
@@ -85,6 +85,42 @@ export default function EarlyHairDxLanding() {
         </div>
       </section>
 
+      {/* How it works steps */}
+      <section className="px-6 py-20 max-w-5xl mx-auto">
+        <h2 className="text-2xl font-semibold text-slate-900 text-center mb-10">
+          How it works
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="mx-auto w-12 h-12 bg-lime-100 rounded-full flex items-center justify-center mb-4">
+              <FlaskConical className="h-6 w-6 text-lime-600" />
+            </div>
+            <h3 className="font-semibold text-slate-900 mb-2">1. Science Kit</h3>
+            <p className="text-sm text-slate-600">
+              Collect hair, scalp, and water samples with our easy-to-use kit
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="mx-auto w-12 h-12 bg-lime-100 rounded-full flex items-center justify-center mb-4">
+              <Brain className="h-6 w-6 text-lime-600" />
+            </div>
+            <h3 className="font-semibold text-slate-900 mb-2">2. AI Analysis</h3>
+            <p className="text-sm text-slate-600">
+              Our AI analyzes your samples and identifies root causes
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="mx-auto w-12 h-12 bg-lime-100 rounded-full flex items-center justify-center mb-4">
+              <UserCheck className="h-6 w-6 text-lime-600" />
+            </div>
+            <h3 className="font-semibold text-slate-900 mb-2">3. Doctor Review</h3>
+            <p className="text-sm text-slate-600">
+              Expert dermatologists review and personalize your treatment plan
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="px-6 py-20 max-w-3xl mx-auto">
         <h2 className="text-2xl font-semibold text-slate-900 mb-6">FAQs</h2>
@@ -103,7 +139,7 @@ export default function EarlyHairDxLanding() {
 
       {/* Footer */}
       <footer className="px-6 py-8 text-center text-sm text-slate-500 border-t">
-        © 2025 Early HairDx · Made for APM Assignment
+        © 2025 Early HairDx | Made for APM Assignment
       </footer>
     </div>
   );
