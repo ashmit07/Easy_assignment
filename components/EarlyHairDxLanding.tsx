@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import type { ReactNode, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Check, Sparkles, ChevronRight } from "lucide-react";
 
@@ -9,7 +10,7 @@ const colors = {
   soft: "#faf8f1"
 };
 
-const Pill = ({ children }: { children: React.ReactNode }) => (
+const Pill = ({ children }: { children: ReactNode }) => (
   <span className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium text-slate-700 border-slate-200 bg-white shadow-sm">
     {children}
   </span>
@@ -51,7 +52,7 @@ export default function EarlyHairDxLanding() {
 
   const t = copy[lang];
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     console.log("Form submitted", { email, lang });
     setSubmitted(true);
@@ -82,7 +83,10 @@ export default function EarlyHairDxLanding() {
       <section className="relative">
         <div className="mx-auto max-w-7xl px-4 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <Pill><Sparkles className="h-4 w-4" /> Personalized hair & scalp diagnosis</Pill>
+            <Pill>
+              <Sparkles className="h-4 w-4" /> 
+              Personalized hair & scalp diagnosis
+            </Pill>
             <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
               {t.heroTitle}
             </h1>

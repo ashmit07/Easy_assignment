@@ -1,4 +1,4 @@
-// same as before landing page
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -6,7 +6,9 @@ import { motion } from "framer-motion";
 export default function Landing() {
   return (
     <>
-      <Head><title>Early HairDx – Personalized Hair Diagnosis</title></Head>
+      <Head>
+        <title>Early HairDx – Personalized Hair Diagnosis</title>
+      </Head>
       <main className="min-h-screen bg-white">
         <section className="px-6 py-20 text-center bg-gradient-to-b from-white to-slate-50">
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900">
